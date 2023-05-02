@@ -95,22 +95,6 @@ class Student:
                 grade_list.append(value)
         return f'Средняя оценка всех студентов в рамках курса {course}: {round(sum(grade_list)/len(grade_list), 1)}'
                     
-# Ф-ции подсчета средней оценки за д/з и лекции
-def average_grade_for_course(students, course):
-    grades = []
-    for student in students:
-        if course in student.grades:
-            grades += student.grades[course]
-    return sum(grades) / len(grades)
-
-def average_lecture_grade(lecturers, course):
-    grades = []
-    for lecturer in lecturers:
-        if course in lecturer.grades:
-            grades += lecturer.grades[course]
-    return sum(grades) / len(grades)
-
-# Создание экземпляров классов/объектов
 lecturer_1 = Lecturer('Владимир', 'Путин')
 lecturer_1.courses_attached += ['Python']
 lecturer_2 = Lecturer('Владимир', 'Зеленский')
