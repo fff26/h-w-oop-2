@@ -112,9 +112,7 @@ student_2 = Student('Ллойд', 'Остин', 'male')
 student_2.finished_courses += ['Python']
 student_2.courses_in_progress += ['Git']
 
-# Вызов созданных методов
 print(lecturer_1.__str__())
 reviewer_1.rate_hw(student_1, 'Python', 5)
 print(lecturer_1 > lecturer_2)
 print(student_1 > student_2)
-print(average_lecture_grade(lecturer_1, 'Python'))
